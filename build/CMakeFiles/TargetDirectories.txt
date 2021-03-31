@@ -1,0 +1,16 @@
+/home/jazon/Projects/SBT/f1xx-project-template/build/CMakeFiles/rebuild_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/CMakeFiles/edit_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/CMakeFiles/rebuild_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/CMakeFiles/edit_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/SBT-SDK-F1xx/CMakeFiles/rebuild_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/SBT-SDK-F1xx/CMakeFiles/edit_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/SBT-SDK-F1xx/CMakeFiles/FreeRTOS-Kernel.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/SBT-SDK-F1xx/CMakeFiles/STM32Cube-F1.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/SBT-SDK-F1xx/SBT-Hardware/CMakeFiles/rebuild_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/SBT-SDK-F1xx/SBT-Hardware/CMakeFiles/edit_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Lib/SBT-SDK-F1xx/SBT-Hardware/CMakeFiles/SBT-Hardware.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Core/CMakeFiles/rebuild_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/Core/CMakeFiles/edit_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/App/CMakeFiles/rebuild_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/App/CMakeFiles/edit_cache.dir
+/home/jazon/Projects/SBT/f1xx-project-template/build/App/CMakeFiles/Firmware.dir

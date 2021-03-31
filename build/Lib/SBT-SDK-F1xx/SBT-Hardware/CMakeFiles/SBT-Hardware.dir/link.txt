@@ -1,0 +1,2 @@
+/opt/arm-gcc/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-ar qc libSBT-Hardware.a CMakeFiles/SBT-Hardware.dir/Hardware.cpp.obj
+/opt/arm-gcc/gcc-arm-none-eabi-10-2020-q4-major/bin/arm-none-eabi-ranlib libSBT-Hardware.a
