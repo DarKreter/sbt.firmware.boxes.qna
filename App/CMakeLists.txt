@@ -6,7 +6,7 @@ add_executable(Firmware
         Tasks/TaskManager.cpp
         # User code
         Tasks/LedDebug.cpp
-        Tasks/Konwerter.cpp Tasks/Konwerter.hpp)
+)
 
 target_include_directories(Firmware PRIVATE Tasks/)
 
