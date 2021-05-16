@@ -3,7 +3,12 @@
 #include <queue.h>
 #include <functional>
 
+//TODO(Daniel): remove this
+#include<Hardware.hpp>
+#include<UART.hpp>
+
 #include <LedDebug.hpp>
+#include <Konwerter.hpp>
 
 // TODO: move that to main.cpp
 extern "C" {
@@ -14,6 +19,12 @@ extern "C" {
 
 // This is "main" - entry function that is called after system initialization
 void entryPoint(){
+    //TODO(Daniel): change this to constructors and remove
+    Hardware::uart1.configureStaticVariables(USART1);
+    Hardware::uart2.configureStaticVariables(USART2);
+    Hardware::uart3.configureStaticVariables(USART3);
+    
+    
     TaskManager taskManager;
     taskManager.registerTasks();
     taskManager.startTasks();
@@ -43,7 +54,8 @@ size_t Task::getPriority() const {
 }
 
 void TaskManager::registerTasks() {
-    tasks.push_back(std::make_shared<LedDebug>());
+    //tasks.push_back(std::make_shared<LedDebug>());
+    tasks.push_back(std::make_shared<Konwerter>());
 }
 
 void TaskManager::startTasks() {

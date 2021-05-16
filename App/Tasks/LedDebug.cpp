@@ -2,7 +2,7 @@
 #include <Hardware.hpp>
 
 
-LedDebug::LedDebug() : Task({}, 100, 2){
+LedDebug::LedDebug() : Task({}, 1000, 2){
 
 }
 
@@ -12,7 +12,5 @@ void LedDebug::initialize() {
 }
 
 void LedDebug::run() {
-    Hardware::toggle(GPIOC, GPIO_PIN_13);
-    Hardware::toggle(GPIOC, GPIO_PIN_13);
     Hardware::toggle(GPIOC, GPIO_PIN_13);
 }
