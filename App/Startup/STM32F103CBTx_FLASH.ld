@@ -52,6 +52,6 @@ SECTIONS {
     } > SRAM*/
 
     . = ALIGN(4);
-    __heap_start = . + 0x1000;
+    __heap_start = .;
     end = __heap_start;
 }

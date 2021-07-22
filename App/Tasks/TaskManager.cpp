@@ -7,9 +7,7 @@
 
 // TODO: move that to main.cpp
 extern "C" {
-    // Starting point of heap
-    extern uint8_t __heap_start[];
-    uint8_t* ucHeap = __heap_start;
+    __attribute__ ((aligned (64))) uint8_t ucHeap[configTOTAL_HEAP_SIZE];
 }
 
 // This is "main" - entry function that is called after system initialization
