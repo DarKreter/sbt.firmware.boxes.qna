@@ -5,13 +5,9 @@
 
 #include <LedDebug.hpp>
 
-// TODO: move that to main.cpp
-extern "C" {
-    __attribute__ ((aligned (64))) uint8_t ucHeap[configTOTAL_HEAP_SIZE];
-}
-
 // This is "main" - entry function that is called after system initialization
 void entryPoint(){
+    
     TaskManager taskManager;
     taskManager.registerTasks();
     taskManager.startTasks();

@@ -1,6 +1,19 @@
 #include <Hardware.hpp>
 
-extern "C" {
+extern "C"
+{
+    __attribute__ ((aligned (64))) uint8_t ucHeap[configTOTAL_HEAP_SIZE];
+}
+
+//For static constructors
+extern "C"
+{
+    void _init(){}
+    void __libc_init_array();
+}
+
+extern "C"
+{
     // Ranges of the .bss section
     extern size_t __bss_start[];
     extern size_t __bss_end[];
@@ -62,7 +75,8 @@ extern "C" {
 }
 
 // FreeRTOS callbacks that will be used below
-extern "C" {
+extern "C"
+{
     void* pvPortMalloc(size_t);
     void vPortFree(void*);
 
@@ -72,7 +86,8 @@ extern "C" {
 }
 
 // Semihosting stuff
-extern "C" {
+extern "C"
+{
     extern void initialise_monitor_handles(void);
 }
 
@@ -107,6 +122,9 @@ void resetHandler() {
 
     // Enable semihosting
 //    initialise_monitor_handles();
+    
+    /* Call static constructors */
+    __libc_init_array();
 
     entryPoint();
 }
