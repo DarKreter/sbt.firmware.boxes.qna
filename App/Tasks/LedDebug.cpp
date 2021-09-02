@@ -13,6 +13,4 @@ void LedDebug::initialize() {
 
 void LedDebug::run() {
     Hardware::toggle(GPIOC, GPIO_PIN_13);
-    Hardware::toggle(GPIOC, GPIO_PIN_13);
-    Hardware::toggle(GPIOC, GPIO_PIN_13);
 }
