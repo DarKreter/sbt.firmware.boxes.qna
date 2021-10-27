@@ -3,17 +3,6 @@
 #include <queue.h>
 #include <functional>
 
-#include <LedDebug.hpp>
-
-// This is "main" - entry function that is called after system initialization
-void entryPoint(){
-    
-    TaskManager taskManager;
-    taskManager.registerTasks();
-    taskManager.startTasks();
-    taskManager.startRtos();
-}
-
 Task::Task(const Task::NameType name, size_t periodicity, size_t priority)
     : name(name), periodicity(periodicity), priority(priority){
 
@@ -36,8 +25,13 @@ size_t Task::getPriority() const {
     return priority;
 }
 
+std::vector<std::shared_ptr<Task>> TaskManager::tasks;
+
+void TaskManager::registerTask(std::shared_ptr<Task> task) {
+    tasks.push_back(task);
+}
+
 void TaskManager::registerTasks() {
-    tasks.push_back(std::make_shared<LedDebug>());
 }
 
 void TaskManager::startTasks() {

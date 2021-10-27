@@ -1,5 +1,6 @@
 #include <LedDebug.hpp>
 #include <Hardware.hpp>
+#include "TaskManager.hpp"
 
 
 LedDebug::LedDebug() : Task({}, 100, 2){

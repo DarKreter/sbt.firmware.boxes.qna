@@ -37,16 +37,18 @@ protected:
     const size_t priority;
 };
 
-struct TaskManager {
+class TaskManager {
+public:
+    static  void registerTask(std::shared_ptr<Task> task);
     // Place where all tasks are being registered
-    void registerTasks();
+    static void registerTasks();
     // Register all tasks in FreeRTOS - allocate local stack etc.
-    void startTasks();
+    static void startTasks();
     // Start scheduler - this function theoretically should not return
-    void startRtos();
+    static void startRtos();
 
 private:
-    std::vector<std::shared_ptr<Task>> tasks;
+    static std::vector<std::shared_ptr<Task>> tasks;
 };
 
 

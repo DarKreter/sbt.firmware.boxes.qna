@@ -27,7 +27,7 @@ add_compile_options(
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DSTM32F103x6 -Wl,-gc-sections -Wl,--export-dynamic" CACHE INTERNAL "C++ Compiler options")
 #set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DSTM32F103x6 -Wl,-gc-sections -Wl,--export-dynamic"  CACHE INTERNAL "C Compiler options")
 
-set(CMAKE_CXX_FLAGS "-DSTM32F103xB -Wl,-gc-sections -Wl,--export-dynamic" CACHE INTERNAL "C++ Compiler options")
+set(CMAKE_CXX_FLAGS "-DSTM32F103xB -Wl,-gc-sections -Wl,--export-dynamic -fno-use-cxa-atexit" CACHE INTERNAL "C++ Compiler options")
 set(CMAKE_C_FLAGS "-DSTM32F103xB -Wl,-gc-sections -Wl,--export-dynamic"  CACHE INTERNAL "C Compiler options")
 
 SET(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS)

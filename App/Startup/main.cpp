@@ -1,4 +1,6 @@
-#include <Hardware.hpp>
+#include "Hardware.hpp"
+#include "TaskManager.hpp"
+#include "LedDebug.hpp"
 
 extern "C"
 {
@@ -104,9 +106,14 @@ void operator delete(void* ptr, [[maybe_unused]] size_t){
     vPortFree(ptr);
 }
 
+// This is "main" - entry function that is called after system initialization
+void entryPoint(){
+    TaskManager::registerTask(std::make_shared<LedDebug>());
 
-// Assume that user will use this function as 'main'
-void entryPoint();
+    TaskManager::registerTasks();
+    TaskManager::startTasks();
+    TaskManager::startRtos();
+}
 
 // First function that is called after boot-up
 void resetHandler() {
