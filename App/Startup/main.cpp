@@ -1,6 +1,7 @@
 #include "Hardware.hpp"
 #include "TaskManager.hpp"
 #include "LedDebug.hpp"
+#include "canTest.hpp"
 
 extern "C"
 {
@@ -109,6 +110,7 @@ void operator delete(void* ptr, [[maybe_unused]] size_t){
 // This is "main" - entry function that is called after system initialization
 void entryPoint(){
     TaskManager::registerTask(std::make_shared<LedDebug>());
+    TaskManager::registerTask(std::make_shared<CanTest>());
 
     TaskManager::registerTasks();
     TaskManager::startTasks();

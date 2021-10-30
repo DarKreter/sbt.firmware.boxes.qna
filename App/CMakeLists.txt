@@ -6,6 +6,7 @@ add_executable(Firmware
         Tasks/TaskManager.cpp
         # User code
         Tasks/LedDebug.cpp
+        Tasks/canTest.cpp
 )
 
 target_include_directories(Firmware PRIVATE Tasks/)
