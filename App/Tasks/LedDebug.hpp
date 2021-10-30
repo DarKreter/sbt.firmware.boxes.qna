@@ -4,7 +4,7 @@
 #include <TaskManager.hpp>
 
 
-struct LedDebug : public Task{
+struct LedDebug : public SBT::System::PeriodicTask{
     LedDebug();
     void initialize() override;
     void run() override;

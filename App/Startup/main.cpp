@@ -109,6 +109,8 @@ void operator delete(void* ptr, [[maybe_unused]] size_t){
 
 // This is "main" - entry function that is called after system initialization
 void entryPoint(){
+    using namespace SBT::System;
+    
     TaskManager::registerTask(std::make_shared<LedDebug>());
     TaskManager::registerTask(std::make_shared<CanTest>());
 

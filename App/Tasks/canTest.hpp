@@ -7,7 +7,7 @@
 
 #include "TaskManager.hpp"
 
-class CanTest : public Task {
+class CanTest : public SBT::System::PeriodicTask {
 public:
     CanTest();
     void initialize() override;

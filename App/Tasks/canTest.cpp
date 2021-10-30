@@ -5,7 +5,7 @@
 #include "canTest.hpp"
 #include "Hardware.hpp"
 
-CanTest::CanTest()  : Task({}, 500, 2){
+CanTest::CanTest()  : PeriodicTask({}, 500, 2){
 
 }
 

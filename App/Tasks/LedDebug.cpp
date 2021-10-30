@@ -3,7 +3,7 @@
 #include "TaskManager.hpp"
 
 
-LedDebug::LedDebug() : Task({}, 100, 2){
+LedDebug::LedDebug() : PeriodicTask({}, 100, 2){
 
 }
 
