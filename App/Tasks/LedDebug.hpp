@@ -3,12 +3,10 @@
 
 #include <TaskManager.hpp>
 
-
-struct LedDebug : public SBT::System::PeriodicTask{
-    LedDebug();
-    void initialize() override;
-    void run() override;
+struct LedDebug : public SBT::System::PeriodicTask {
+  LedDebug();
+  void initialize() override;
+  void run() override;
 };
 
-
-#endif //LEDDEBUG_HPP
+#endif // LEDDEBUG_HPP
