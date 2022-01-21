@@ -9,9 +9,9 @@
 
 class CanTest : public SBT::System::PeriodicTask {
 public:
-  CanTest();
-  void initialize() override;
-  void run() override;
+    CanTest();
+    void initialize() override;
+    void run() override;
 };
 
-#endif //F1XX_PROJECT_TEMPLATE_CANTEST_HPP
+#endif // F1XX_PROJECT_TEMPLATE_CANTEST_HPP
