@@ -1,9 +1,8 @@
 typedef void (*ptr_func_t)();
 
-extern "C" void __stop()
-{
-    while(true)
-        ;
+extern "C" void __stop() {
+  while (true)
+    ;
 }
 
 __attribute__((weak, alias("__stop"))) void resetHandler();
